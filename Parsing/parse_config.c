@@ -6,7 +6,7 @@
 /*   By: sdiakho <sdiakho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:43:34 by sdiakho           #+#    #+#             */
-/*   Updated: 2026/04/22 17:54:42 by sdiakho          ###   ########.fr       */
+/*   Updated: 2026/04/24 08:55:36 by sdiakho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,8 @@ int	init_cub(t_cub *cub)
 	cub->rgb_ceil = -1;
 	cub->rgb_floor = -1;
 	cub->map_start = NULL;
-	cub->p1 = malloc(sizeof(t_player));
-	if (!cub->p1)
-		return (0);
-	cub->p1->pos_x = -1;
-	cub->p1->pos_y = -1;
+	cub->p1.pos_x = -1;
+	cub->p1.pos_y = -1;
 	return (1);
 }
 

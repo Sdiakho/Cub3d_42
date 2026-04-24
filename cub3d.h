@@ -6,7 +6,7 @@
 /*   By: sdiakho <sdiakho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 17:09:57 by sdiakho           #+#    #+#             */
-/*   Updated: 2026/04/23 14:33:54 by sdiakho          ###   ########.fr       */
+/*   Updated: 2026/04/24 08:53:14 by sdiakho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,17 @@ typedef struct s_player
 	double	plane_x;
 	double	plane_y;
 }			t_player;
-
+			
+typedef struct s_mlx
+{
+	void	*mlx;
+	void	*win;
+	void    *img;
+    char    *addr;
+    int     bpp;
+    int     line_len;
+    int     endian;
+}			t_mlx;
 
 typedef struct s_cub
 {
@@ -44,7 +54,8 @@ typedef struct s_cub
 	char		*ea_path;
 	char		*ceil;
 	char		*floor;
-	t_player	*p1;
+	t_player	p1;
+	t_mlx		game;
 	int			rgb_ceil;
 	int			rgb_floor;
 	int			height;
@@ -52,6 +63,7 @@ typedef struct s_cub
 	t_list		*list_map;
 	t_list		*map_start;
 }			t_cub;
+
 
 /*  Parsing  */
 int		init_cub(t_cub *cub);
